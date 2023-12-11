@@ -1,0 +1,46 @@
+# Site
+title: Pineberry Pi Documentaton
+description: Everything about our products in one place
+baseurl: /
+permalink: /:title
+
+# Repository
+git:
+  repository_url: https://github.com/PineberryPi/pineberry-docs.github.io
+
+# Navigation
+nav:
+  Documentation:
+    - text: Connecting your HatDrive!
+      url: /tutorial-connecting-your-hatdrive
+      available: true
+    - text: NVMe compatibility list
+      url: /nvme-compatibility-list
+      available: true
+    - text: Booting from NVMe
+      url: /tutorial-booting-from-nvme
+      available: true
+  Resources:
+    - text: HatDrive 3D Models
+      url: /resources-3d-models
+      available: true
+  Developers:
+    - text: Contributions
+      url: /contributions
+      available: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+exclude: ["README.md"]

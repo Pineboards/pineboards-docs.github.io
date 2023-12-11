@@ -1,0 +1,78 @@
+{% assign current_url = page.url | remove: 'index.html' %}
+
+{% comment %} Generate links to previous and next page. {% endcomment %}
+{% assign nav_items = site.nav.Documentation | concat: site.nav.Resources | concat: site.nav.Developers %}
+{% assign cutoff_one = site.nav.Users.size %}
+{% assign cutoff_two = cutoff_one | plus: site.nav.Developers.size %}
+{% for link in nav_items %}
+  {% if forloop.index0 == cutoff_one or forloop.index0 == cutoff_two %} {% comment %} If we iterated over all links in a section... {% endcomment %}
+    {% if current_page %}{% break %}{% endif %} {% comment %} Last page; stop looking for "next" link. {% endcomment %}
+    {% assign previous_page = nil %} {% comment %} No "previous" link on first item in category. {% endcomment %}
+  {% endif %}
+  {% unless link.available %}{% continue %}{% endunless %} {% comment %} Skip unavailable links. {% endcomment %}
+  {% if current_page %}
+    {% assign next_page = link %}
+    {% break %}
+  {% endif %}
+  {% if link.url == current_url %}
+    {% assign current_page = link %}
+  {% endif %}
+  {% unless current_page %}
+    {% assign previous_page = link %}
+  {% endunless %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}<meta name="description" content="{{ page.description | strip_newlines }}">{% endif %}
+    <title>{{ current_page.text }} - {{ site.title }}</title>
+    <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/icons/apple-icon-57x57.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/icons/apple-icon-60x60.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/icons/apple-icon-72x72.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/icons/apple-icon-76x76.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/icons/apple-icon-114x114.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/icons/apple-icon-120x120.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/icons/apple-icon-144x144.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/icons/apple-icon-152x152.png" | prepend: site.baseurl }} ">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-icon-180x180.png" | prepend: site.baseurl }} ">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ "/assets/icons/favicon-192x192.png" | prepend: site.baseurl }} ">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icons/favicon-32x32.png" | prepend: site.baseurl }} ">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/icons/favicon-96x96.png" | prepend: site.baseurl }} ">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icons/favicon-16x16.png" | prepend: site.baseurl }} ">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <script defer src="{{ "/js/docsearch-2.6.3.min.js" | prepend: site.baseurl }}"></script>
+    <script defer src="{{ "/js/docsearch-config.js" | prepend: site.baseurl }}"></script>
+  </head>
+  <body class="page">
+    <input class="menu-checkbox" id="menu" type="checkbox">
+    <header class="header">
+      <div class="header__container">
+        <label class="header__menu-toggle" for="menu"><span class="hamburger"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></span></label>
+        <div class="header__logo">
+            <a class="header__logo-link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
+        </div>
+      </div>
+    </header>
+    {% include navigation.html %}
+    <div class="content-wrapper">
+      <main class="content">
+        {{ content }}
+      </main>
+      <div class="content__nav">
+        {% if previous_page %}<a class="content__nav-link content__nav-link--prev" href="{{ previous_page.url | prepend: site.baseurl }}">{{ previous_page.text }}</a>{% endif %}
+        {% if next_page %}<a class="content__nav-link content__nav-link--next" href="{{ next_page.url | prepend: site.baseurl }}">{{ next_page.text }}</a>{% endif %}
+      </div>
+      <div class="content__meta">
+        <p>
+          Want to improve the content of this page?
+          <a href="/contributions"">Submit a pull request</a> or <a href="https://x.com/PineberryPi">join the discussion on X</a>
+        </p>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
