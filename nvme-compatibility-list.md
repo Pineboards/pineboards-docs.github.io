@@ -25,6 +25,7 @@ Before launching our board we concluded extensive testing to ensure compatibilit
 - WD SN740
 - WD SN350
 - WD SN770
+- WD SN770M
 - WD SN850 [possibly](https://github.com/raspberrypi/linux/issues/5217)
 
 Those three drives also do not work on the Compute Module 4 and they share the same PCB layout. 
