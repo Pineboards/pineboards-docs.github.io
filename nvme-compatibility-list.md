@@ -2,6 +2,8 @@
 
 Before launching our board we concluded extensive testing to ensure compatibility with the most popular drives. If you want to use a different drive it will mostly likely work without any issues. Our compatibility list also includes performance benchmarks made with the tool provided by [pibenchmarks.com](https://pibenchmarks.com)
 
+When purchasing a drive please make sure that you purchase a NVMe drive, not a SATA drive!
+
 ### Compatible drives
 
 |Name|DD Write|HDParam(disk)|Score (pibenchmarks)|
@@ -21,6 +23,8 @@ Before launching our board we concluded extensive testing to ensure compatibilit
 
 
 ### Not compatible drives
+
+WD SN530 has been problematic for some users when it comes to NVMe boot, especially in the 2242 variant. Our test drive was a 2280 SKU and it worked OK but we gernally recommend staying away from Western Digital drives completely. 
 
 - WD SN740
 - WD SN350
