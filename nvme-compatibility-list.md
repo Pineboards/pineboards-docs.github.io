@@ -1,6 +1,6 @@
 ### NVMe compatibility list
 
-Before launching our board we concluded extensive testing to ensure compatibility with the most popular drives. If you want to use a different drive it will mostly likely work without any issues. Our compatibility list also includes performance benchmarks made with the tool provided by [pibenchmarks.com](pibenchmarks.com)
+Before launching our board we concluded extensive testing to ensure compatibility with the most popular drives. If you want to use a different drive it will mostly likely work without any issues. Our compatibility list also includes performance benchmarks made with the tool provided by [pibenchmarks.com](https://pibenchmarks.com)
 
 ### Compatible drives
 
