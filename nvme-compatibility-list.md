@@ -24,7 +24,7 @@ When purchasing a drive please make sure that you purchase a NVMe drive, not a S
 
 ### Not compatible drives
 
-WD SN530 has been problematic for some users when it comes to NVMe boot, especially in the 2242 variant. Our test drive was a 2280 SKU and it worked OK but we gernally recommend staying away from Western Digital drives completely. 
+WD SN530 has been problematic for some users when it comes to NVMe boot, especially in the 2242 variant. Our test drive was a 2280 SKU and it worked OK but we generally recommend staying away from Western Digital drives completely. 
 
 - WD SN740
 - WD SN350
