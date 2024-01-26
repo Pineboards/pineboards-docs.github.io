@@ -6,6 +6,7 @@ Before launching our board we concluded extensive testing to ensure compatibilit
 
 |Name|DD Write|HDParam(disk)|Score (pibenchmarks)|
 |---|---|---|---|
+|Pineberry Pi Pinedrive (2280)|388 MB/s|817.69 MB/s|38547|
 |Western Digital SN530|441 MB/s|845.35 MB/s|45,735|
 |Samsung 970 EVO Plus|314 MB/s|776.7 MB/s|27,960|
 |Sabrent Rocket 4.0|350 MB/s|773.9 MB/s|47,002|
