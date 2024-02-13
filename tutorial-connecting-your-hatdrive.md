@@ -12,9 +12,13 @@ There is an alignment triangle on both the ribbon and the HatDrive!, please use 
 
 <img src="/assets/hatdrive-top-with-nvme.jpeg" alt="logo" style="width: 100%"/>
 
+#### Updating your Pi
+
+The boards we currently ship to customers support HAT+ power management for PCIe devices. If the power LED on your Pineberry Pi board does not light up when you connect it for the first time you need to update your firmware. Execute following commands in your Raspberry Pi OS terminal:
+
+`sudo apt-get update && sudo apt-get upgrade`
 
 #### Enabling NVMe
-
 
 If you do not intend to use your NVMe drive as a boot drive you need to enable the external PCIe port on the Pi 5:
 
