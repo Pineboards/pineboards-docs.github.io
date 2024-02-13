@@ -21,8 +21,11 @@ nav:
       url: /tutorial-booting-from-nvme
       available: true
   Resources:
-    - text: HatDrive 3D Models
+    - text: HatDrive! 3D Models
       url: /resources-3d-models
+      available: true
+    - text: Pinedrive Datasheets
+      url: /resources-pinedrive-datasheets
       available: true
   Developers:
     - text: Contributions
