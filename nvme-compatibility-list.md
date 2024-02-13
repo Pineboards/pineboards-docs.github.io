@@ -22,6 +22,8 @@ When purchasing a drive please make sure that you purchase a NVMe drive, not a S
 |Kingston KC3000|393 MB/s |832.70 MB/sec|44203|
 |XPG GAMMIX S70 BLADE|403 MB/s |829.90 MB/sec |41316|
 
+### Notes
+Lexar NM620 shipps with various firmware revisions, you might need to use this drive in Gen 2 mode.
 
 ### Not compatible drives
 
