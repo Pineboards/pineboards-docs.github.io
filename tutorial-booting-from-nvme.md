@@ -2,7 +2,7 @@
 
 <img src="/assets/hatdrive-bottom.jpeg" alt="logo" style="max-width: 450px"/>
 
-There are a few simple steps you need to make in order to boot from NVMe on your Raspberry Pi 5. This quide assumes that you are running Raspbian from an SD Card and you have correctly installed your HatDrive! together with a compatible drive.
+There are a few simple steps you need to make in order to boot from NVMe on your Raspberry Pi 5. This guide assumes that you are running Raspbian from an SD Card and you have correctly installed your HatDrive! together with a compatible drive.
 
 1. Ensure your system is up to date. This is crucial since old firmware revisions do not support booting from NVMe. Execute those commands in your terminal: 
 `sudo apt-get update`,
