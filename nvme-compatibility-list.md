@@ -33,5 +33,4 @@ WD SN530 has been problematic for some users when it comes to NVMe boot, especia
 - WD SN350
 - WD SN770
 - WD SN850 [possibly](https://github.com/raspberrypi/linux/issues/5217)
-
-Those three drives also do not work on the Compute Module 4 and they share the same PCB layout. 
+- Transcend TSXXXGMTE300S (submitted by our community)
